@@ -8,8 +8,6 @@ chart = st.line_chart([0.5])
 
 def toss_coin(n):
 
-    'function that simulates a coin toss'
-
     trial_outcomes = scipy.stats.bernoulli.rvs(p=0.5, size=n)
 
     mean = None
@@ -17,7 +15,7 @@ def toss_coin(n):
     outcome_1_count = 0
 
     for r in trial_outcomes:
-        outcome_no += 1
+        outcome_no +=1
         if r == 1:
             outcome_1_count += 1
         mean = outcome_1_count / outcome_no
@@ -26,8 +24,8 @@ def toss_coin(n):
 
     return mean
 
-number_of_trials = st.slider('Number of trials', 1, 1000, 10)
-start_button = st.button('Run')
+number_of_trials = st.slider('Número de tentativas?', 1, 1000, 10)
+start_button = st.button('Executar')
 
 if start_button:
     st.write(f'Executando o experimento de {number_of_trials} tentativas.')
