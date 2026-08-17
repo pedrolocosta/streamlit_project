@@ -21,6 +21,8 @@ chart_placeholder.line_chart(pd.DataFrame({'mean': [0.5]}))
 
 
 def toss_coin(n):
+    '''This function simulates tossing a coin n times and returns the mean of the outcomes.'''
+
     trial_outcomes = scipy.stats.bernoulli.rvs(p=0.5, size=n)
 
     mean = None
